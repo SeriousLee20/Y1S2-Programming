@@ -122,7 +122,7 @@ public class LinkedList<T extends Comparable<T>> implements Comparable<LinkedLis
         if (index == 0) {
             prepend(data);
 
-        } else if (index == length() - 1) {
+        } else if (index == length()) {
             append(data);
 
         } else if (index >= length() || index < 0) {

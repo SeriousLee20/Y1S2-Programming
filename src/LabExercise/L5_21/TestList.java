@@ -11,7 +11,8 @@ public class TestList {
     public static void main(String[] args) {
 
         //Q1();
-        Q2();
+        //Q2();
+        Q3();
 
     }
 
@@ -100,5 +101,37 @@ public class TestList {
 
         System.out.println("\nAll student data captured complete. Thank you!");
 
+    }
+
+    public static void Q3() {
+
+        MyDLL<Integer> list1 = new MyDLL<>();
+
+        list1.addFirst(1);
+        //list1.iterateForward();
+        //list1.iterateBackward();
+
+        list1.addLast(100);
+        //list1.iterateForward();
+        //list1.iterateBackward();
+
+        list1.add(2, 2);
+        //list1.iterateForward();
+        //list1.iterateBackward();
+
+        list1.remove(3);
+
+        System.out.println();
+        list1.iterateForward();
+        list1.iterateBackward();
+
+        int size = list1.getSize();
+        System.out.println("Size of current Doubly Linked List: " + size);
+
+        System.out.println("Clear the list.");
+        list1.clear();
+
+        size = list1.getSize();
+        System.out.println("Size of current Doubly Linked List: " + size);
     }
 }

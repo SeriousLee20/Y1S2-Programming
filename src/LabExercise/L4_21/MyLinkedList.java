@@ -72,7 +72,7 @@ public class MyLinkedList<E> {
 
         if (index == 0) {
             addFirst(e);
-        } else if (index == size - 1) {
+        } else if (index == size) {
             addLast(e);
         } else if (index < 0 || index >= size) {
             System.out.println("Invalid index. No element is added.");
