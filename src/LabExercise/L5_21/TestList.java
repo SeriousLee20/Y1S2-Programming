@@ -130,6 +130,7 @@ public class TestList {
 
         System.out.println("Clear the list.");
         list1.clear();
+        list1.iterateForward();
 
         size = list1.getSize();
         System.out.println("Size of current Doubly Linked List: " + size);

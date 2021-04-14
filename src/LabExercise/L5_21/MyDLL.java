@@ -186,7 +186,15 @@ public class MyDLL<E> {
     public void clear() {
         System.out.println("successfully clear " + size + " node(s)");
 
-        head = null;
+        DLLNode<E> temp = head;
+
+        while (head != null) {
+            temp = head.next;
+            head.next = head.prev = null;
+            head = temp;
+        }
+
+        tail.prev = tail.next = null;
         size = 0;
     }
 
