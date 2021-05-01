@@ -50,6 +50,10 @@ public class MyQueue<E> {
         return list.isEmpty();
     }
 
+    public void clear() {
+        list.clear();
+    }
+
     public String toString() {
         return "Queue: " + list.toString();
     }
