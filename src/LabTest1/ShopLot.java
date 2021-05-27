@@ -1,14 +1,17 @@
-package U2005353;
+package LabTest1;
 
 /*
  * Author: Hui Xin
- * 01 Apr 2021
+ * 05 May 2021
  */
 
+import java.util.Arrays;
+
 public class ShopLot {
+
     private String shopName;
     private Person contactPerson;
-    private Person employees;
+    private Person[] employees;
     private int numberOfEmployees;
 
     public ShopLot() {
@@ -23,21 +26,33 @@ public class ShopLot {
         this.contactPerson = contactPerson;
     }
 
-    public ShopLot(String shopName, Person contactPerson, Person employees) {
+    public ShopLot(String shopName, Person contactPerson, Person[] employees) {
         this.shopName = shopName;
         this.contactPerson = contactPerson;
         this.employees = employees;
+        numberOfEmployees = employees.length;
+    }
+
+    public void setContactPerson(Person contactPerson) {
+        this.contactPerson = contactPerson;
     }
 
     public Person getContactPerson() {
         return contactPerson;
     }
 
-    public Person getEmployees() {
+    public void setEmployees(Person[] employees) {
+        this.employees = employees;
+    }
+
+    public Person[] getEmployees() {
         return employees;
     }
 
-    public int getNumberOfEmployees() {
-        return numberOfEmployees;
+    @Override
+    public String toString() {
+        return "ShopLot{" +
+                "shopName='" + shopName + '\'' +
+                ", contactPerson=" + contactPerson;
     }
 }
