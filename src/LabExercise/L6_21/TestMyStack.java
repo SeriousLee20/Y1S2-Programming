@@ -77,11 +77,9 @@ public class TestMyStack {
             }
         }
 
-        System.out.println("The string is a palidrome: " + isPalindrome);
+        System.out.println("The string is a palindrome: " + isPalindrome);
     }
 
     public static void hanoiTower(int numOfDisk) {
-
-
     }
 }
