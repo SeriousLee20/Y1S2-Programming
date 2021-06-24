@@ -6,14 +6,14 @@ package LabExercise.L4_21;
  */
 
 public class MyLinkedList<E> {
-    Node<E> head;
-    Node<E> tail;
+    ListNode<E> head;
+    ListNode<E> tail;
     private int size = 0;
 
     public MyLinkedList() {
     }
 
-    public MyLinkedList(Node<E> head, Node<E> tail) {
+    public MyLinkedList(ListNode<E> head, ListNode<E> tail) {
         this.head = head;
         this.tail = tail;
     }
@@ -38,10 +38,10 @@ public class MyLinkedList<E> {
     /**Add an element to the head of list*/
     public void addFirst(E e) {
 
-        Node<E> newNode = new Node<>(e);
+        ListNode<E> newListNode = new ListNode<>(e);
 
-        newNode.next = head;
-        head = newNode;
+        newListNode.next = head;
+        head = newListNode;
 
         if (tail == null) {
             tail = head;
@@ -53,22 +53,22 @@ public class MyLinkedList<E> {
     /**Add an element to the tail of list*/
     public void addLast(E e) {
 
-        Node<E> newNode = new Node<>(e);
+        ListNode<E> newListNode = new ListNode<>(e);
 
         if (tail == null) {
-            tail = newNode;
+            tail = newListNode;
             head = tail;
             size++;
             return;
         }
 
-        tail.next = newNode;
-        tail = newNode;
+        tail.next = newListNode;
+        tail = newListNode;
         size++;
     }
 
     public void add(int index, E e) {
-        Node<E> newNode = new Node<>(e);
+        ListNode<E> newListNode = new ListNode<>(e);
 
         if (index == 0) {
             addFirst(e);
@@ -78,14 +78,14 @@ public class MyLinkedList<E> {
             System.out.println("Invalid index. No element is added.");
         } else {
 
-            Node<E> current = head;
+            ListNode<E> current = head;
 
             for (int i = 1; i < index; i++) {
                 current = current.next;
             }
 
-            newNode.next = current.next;
-            current.next = newNode;
+            newListNode.next = current.next;
+            current.next = newListNode;
             size++;
         }
     }
@@ -129,7 +129,7 @@ public class MyLinkedList<E> {
             return data;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
 
         while (current.next.next != null) {
             current = current.next;
@@ -155,12 +155,12 @@ public class MyLinkedList<E> {
             return null;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
         for (int i = 1; i < index; i++) {
             current = current.next;
         }
 
-        Node<E> temp = current.next;
+        ListNode<E> temp = current.next;
         current.next = current.next.next;
         size--;
 
@@ -168,17 +168,17 @@ public class MyLinkedList<E> {
     }
 
     public void add(E e) {
-        Node<E> newNode = new Node<>(e);
+        ListNode<E> newListNode = new ListNode<>(e);
 
         if (tail == null) {
-            tail = newNode;
+            tail = newListNode;
             head = tail;
             size++;
             return;
         }
 
-        tail.next = newNode;
-        tail = newNode;
+        tail.next = newListNode;
+        tail = newListNode;
         size++;
     }
 
@@ -188,7 +188,7 @@ public class MyLinkedList<E> {
             return false;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
 
         while (current.next != null) {
 
@@ -216,7 +216,7 @@ public class MyLinkedList<E> {
             return null;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
 
         for (int i = 0; i < index; i++) {
             current = current.next;
@@ -254,7 +254,7 @@ public class MyLinkedList<E> {
             return -1;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
         int index = 0;
 
         while (current.next != null) {
@@ -277,7 +277,7 @@ public class MyLinkedList<E> {
             return -1;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
         int currentIndex = 0;
         int lastIndex = -1;
 
@@ -298,11 +298,11 @@ public class MyLinkedList<E> {
      * @return element that is replaced*/
     public E set(int index, E e) {
 
-        Node<E> newNode = new Node<>(e);
+        ListNode<E> newListNode = new ListNode<>(e);
 
         if (head == null) {
-            newNode.next = null;
-            head = newNode;
+            newListNode.next = null;
+            head = newListNode;
             tail = head;
             return null;
         }
@@ -310,10 +310,10 @@ public class MyLinkedList<E> {
         E data;
         if (index == 0) {
             data = head.data;
-            newNode.next = head.next;
-            head = newNode;
+            newListNode.next = head.next;
+            head = newListNode;
         } else if (index == size - 1) {
-            Node<E> current = head;
+            ListNode<E> current = head;
 
             // size - 1 = tail
             // size - 2 = one node before tail
@@ -323,13 +323,13 @@ public class MyLinkedList<E> {
 
             data = current.next.data;
 
-            newNode.next = null;
-            current.next = newNode;
-            tail = newNode;
+            newListNode.next = null;
+            current.next = newListNode;
+            tail = newListNode;
 
             return data;
         } else {
-            Node<E> current = head;
+            ListNode<E> current = head;
 
             for (int i = 1; i < index; i++) {
                 current = current.next;
@@ -337,8 +337,8 @@ public class MyLinkedList<E> {
 
             data = current.next.data;
 
-            newNode.next = current.next.next;
-            current.next = newNode;
+            newListNode.next = current.next.next;
+            current.next = newListNode;
         }
 
         return data;
@@ -353,7 +353,7 @@ public class MyLinkedList<E> {
         if (head == null) {
             System.out.println("The list is empty.");
         } else {
-            Node<E> current = head;
+            ListNode<E> current = head;
 
             while (current != null) {
                 System.out.print(current.data +" ");
@@ -374,9 +374,9 @@ public class MyLinkedList<E> {
             return;
         }
 
-        Node<E> current = head;
-        Node<E> next = null;
-        Node<E> prev = null;
+        ListNode<E> current = head;
+        ListNode<E> next = null;
+        ListNode<E> prev = null;
 
         while (current != null) {
 
@@ -408,7 +408,7 @@ public class MyLinkedList<E> {
             return head.data;
         }
 
-        Node<E> current = head;
+        ListNode<E> current = head;
         E data;
         if (size % 2 == 0) {
             for (int i = 0; i < size / 2 - 1; i++) {

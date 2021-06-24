@@ -5,23 +5,23 @@ package LabExercise.L4_21;
  * 25 Mar 2021
  */
 
-public class Node<E> {
+public class ListNode<E> {
 
     E data;
-    Node<E> next;
+    ListNode<E> next;
 
-    public Node() {
+    public ListNode() {
     }
 
-    public Node(E data) {
+    public ListNode(E data) {
         this.data = data;
     }
 
-    public Node<E> getNext() {
+    public ListNode<E> getNext() {
         return next;
     }
 
-    public void setNext(Node<E> next) {
+    public void setNext(ListNode<E> next) {
         this.next = next;
     }
 }
