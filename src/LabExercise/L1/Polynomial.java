@@ -9,6 +9,9 @@ public class Polynomial {
     private int degree;
     private double[] coefficientInArray;
 
+    public Polynomial() {
+    }
+
     public Polynomial(int degree, double[] coefficientInArray) {
         this.degree = degree;
         this.coefficientInArray = coefficientInArray;
