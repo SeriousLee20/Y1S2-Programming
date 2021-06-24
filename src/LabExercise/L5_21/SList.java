@@ -5,8 +5,6 @@ package LabExercise.L5_21;
  * 04 Apr 2021
  */
 
-import LabExercise.L4_21.Node;
-
 public class SList<E> {
 
     private SNode<E> head;
