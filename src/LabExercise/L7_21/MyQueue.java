@@ -55,6 +55,11 @@ public class MyQueue<E> {
     }
 
     public String toString() {
-        return "Queue: " + list.toString();
+        StringBuilder s = new StringBuilder();
+        for (E e : list) {
+            s.append(e).append(" ");
+
+        }
+        return "Queue: " + s;
     }
 }
