@@ -5,27 +5,27 @@ package TutExercise.T4;
  * 04 Apr 2021
  */
 
-import LabExercise.L4_21.Node;
+import LabExercise.L4_21.ListNode;
 
 public class Q1 {
     public static void main(String[] args) {
 
-        Node<Character> node1 = new Node<>('a');
-        Node<Character> node2 = new Node<>('z');
+        ListNode<Character> listNode1 = new ListNode<>('a');
+        ListNode<Character> listNode2 = new ListNode<>('z');
 
-        node1.setNext(node2);
+        listNode1.setNext(listNode2);
 
-        Node<Character> firstNode = new Node<>('b');
-        firstNode.setNext(node1);
+        ListNode<Character> firstListNode = new ListNode<>('b');
+        firstListNode.setNext(listNode1);
 
-        Node<Character> lastNode = new Node<>('c');
+        ListNode<Character> lastListNode = new ListNode<>('c');
 
-        Node<Character> current = firstNode;
+        ListNode<Character> current = firstListNode;
         while (current.getNext() != null) {
             current = current.getNext();
         }
 
-        current.setNext(lastNode);
+        current.setNext(lastListNode);
 
     }
 }
