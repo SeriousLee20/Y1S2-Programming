@@ -13,9 +13,27 @@ public class TesterQueue {
         //Q1();
         //palindrome("madam");
 
-        shareGainLoss();
+        //shareGainLoss();
+        testArrayQueue();
     }
 
+    public static void testArrayQueue() {
+        ArrayQueue<Integer> test = new ArrayQueue<>(5);
+
+        test.enqueue(2);
+        test.enqueue(7);
+        test.enqueue(1);
+        test.enqueue(2);
+        test.enqueue(0);
+        test.enqueue(9);
+        System.out.println(test);
+
+        test.dequeue();
+        System.out.println(test);
+        System.out.println(test.getElement(4));
+        //System.out.println(test.getElement(9));
+
+    }
 
     public static void Q1() {
         String[] fruit = {"Durian", "Bluberry"};
