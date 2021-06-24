@@ -20,7 +20,7 @@ public class Q3 {
             return elements;
         }
 
-        /*
+        /**
         * @param beg = initial index
         * @param end = end index
         * */
