@@ -87,7 +87,8 @@ class LinkedList{
     public boolean addAfter(String oldElement, Subject element){
         System.out.println("Adding " + element.getName() + " after " + oldElement + "\n");
         if(!isEmpty()){
-            ListNode<Subject>currentNode = head;
+            ListNode<Subject> currentNode = head;
+
             while(currentNode != null){
                 if(currentNode.getValue().getName().compareTo(oldElement) == 0){
                     ListNode <Subject> temp = currentNode.getNext();
