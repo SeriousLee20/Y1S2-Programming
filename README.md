@@ -1,4 +1,4 @@
-# Intrpduction
+# Introduction
 * This repo includes the coding exercises of Year 1 Semester 2 of a University Malaya Student in 2021.
 The programming language used is Java while the content focus on the data structure.
 The exercises require the students to create the data structure using raw code.
